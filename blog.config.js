@@ -1,7 +1,7 @@
 const BLOG = {
   title: 'Shannon', // 博客标题
   author: 'Shannon Wang', // 作者名称
-  email: 'shannon@shannonwang.top', // 作者邮箱
+  email: ' shannon@shannonwang.top', // 替换为您的 Gravatar 邮箱
   link: 'https://shannonwang.top', // 博客链接
   description: 'I am Shannon Wang, a software engineer. Nice to meet you!', // 博客描述
   lang: 'en-US', // 博客语言 ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
