@@ -2,6 +2,7 @@ import 'prismjs/themes/prism.css'
 import 'react-notion-x/src/styles.css'
 import 'katex/dist/katex.min.css'
 import App from 'next/app'
+import Head from 'next/head'  // 添加这行
 import '@/styles/globals.css'
 import '@/styles/notion.css'
 import dynamic from 'next/dynamic'
@@ -18,6 +19,9 @@ const Gtag = dynamic(() => import('@/components/Gtag'), { ssr: false })
 export default function MyApp ({ Component, pageProps, config, locale }) {
   return (
     <ConfigProvider value={config}>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Scripts />
       <LocaleProvider value={locale}>
         <ThemeProvider>
