@@ -1,62 +1,63 @@
 const BLOG = {
-  title: 'CRAIGARY',
-  author: 'Craig Hart',
-  email: 'i@craigary.net',
-  link: 'https://nobelium.vercel.app',
-  description: 'This gonna be an awesome website.',
-  lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
-  timezone: 'Asia/Shanghai', // Your Notion posts' date will be interpreted as this timezone. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
-  appearance: 'auto', // ['light', 'dark', 'auto'],
-  font: 'sans-serif', // ['sans-serif', 'serif']
-  lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
-  darkBackground: '#18181B', // use hex value, don't forget '#'
-  path: '', // leave this empty unless you want to deploy Nobelium in a folder
-  since: 2021, // If leave this empty, current year will be used.
-  postsPerPage: 7,
-  sortByDate: false,
-  showAbout: true,
-  showArchive: true,
-  autoCollapsedNavBar: false, // The automatically collapsed navigation bar
-  ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
-  socialLink: 'https://twitter.com/craigaryhart',
+  title: 'Shannon', // 博客标题
+  author: 'Shannon Wang', // 作者名称
+  email: 'shannon@shannonwang.top', // 作者邮箱
+  link: 'https://shannonwang.top', // 博客链接
+  description: 'I am Shannon Wang, a software engineer. Nice to meet you!', // 博客描述
+  lang: 'en-US', // 博客语言 ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
+  timezone: 'Asia/Shanghai', // 时区，用于解释 Notion 文章的日期
+  appearance: 'auto', // 外观模式 ['light', 'dark', 'auto']
+  font: 'sans-serif', // 字体 ['sans-serif', 'serif']
+  lightBackground: '#ffffff', // 浅色模式背景色（十六进制值）
+  darkBackground: '#18181B', // 深色模式背景色（十六进制值）
+  path: '', // 部署路径，如果要在子文件夹中部署 Nobelium，则填写文件夹名
+  since: 2021, // 博客创建年份，如果留空则使用当前年份
+  postsPerPage: 7, // 每页显示的文章数量
+  sortByDate: false, // 是否按日期排序文章
+  showAbout: true, // 是否显示"关于"页面
+  showArchive: true, // 是否显示归档页面
+  autoCollapsedNavBar: false, // 是否自动折叠导航栏
+  ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // 生成 OG 图像的链接
+  socialLink: 'https://twitter.com/craigaryhart', // 社交媒体链接
   seo: {
-    keywords: ['Blog', 'Website', 'Notion'],
-    googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
+    keywords: ['Blog', 'Website', 'Notion'], // SEO 关键词
+    googleSiteVerification: '' // Google 站点验证码
   },
-  notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS！！！
-  notionAccessToken: process.env.NOTION_ACCESS_TOKEN, // Useful if you prefer not to make your database public
+  notionPageId: process.env.NOTION_PAGE_ID, // Notion 页面 ID（不要更改）
+  notionAccessToken: process.env.NOTION_ACCESS_TOKEN, // Notion 访问令牌（如果不想公开数据库）
   analytics: {
-    provider: '', // Currently we support Google Analytics and Ackee, please fill with 'ga' or 'ackee', leave it empty to disable it.
+    provider: '', // 分析提供商，支持 Google Analytics 和 Ackee，填写 'ga' 或 'ackee'，留空则禁用
     ackeeConfig: {
-      tracker: '', // e.g 'https://ackee.craigary.net/tracker.js'
-      dataAckeeServer: '', // e.g https://ackee.craigary.net , don't end with a slash
-      domainId: '' // e.g '0e2257a8-54d4-4847-91a1-0311ea48cc7b'
+      tracker: '', // Ackee 跟踪器 URL
+      dataAckeeServer: '', // Ackee 服务器 URL
+      domainId: '' // Ackee 域名 ID
     },
     gaConfig: {
-      measurementId: '' // e.g: G-XXXXXXXXXX
+      measurementId: '' // Google Analytics 测量 ID
     }
   },
   comment: {
-    // support provider: gitalk, utterances, cusdis
-    provider: '', // leave it empty if you don't need any comment plugin
+    // 支持的评论插件提供商：gitalk, utterances, cusdis
+    provider: 'gitalk', // 使用 Gitalk 作为评论系统
     gitalkConfig: {
-      repo: '', // The repository of store comments
-      owner: '',
-      admin: [],
-      clientID: '',
-      clientSecret: '',
-      distractionFreeMode: false
+      repo: 'nobelium', // 存储评论的 GitHub 仓库名
+      owner: 'freedomshannon', // 仓库所有者的 GitHub 用户名
+      admin: ['freedomshannon'], // 可以管理评论的 GitHub 用户名列表
+      clientID: 'Ov23liyTGVf97Gdz0KbR', // 从 GitHub OAuth App 获取的客户端 ID
+      clientSecret: 'f4cabcc714f921f9b8c856c1834f978ed0105746', // 从 GitHub OAuth App 获取的客户端密钥
+      distractionFreeMode: false // 是否启用无干扰模式
     },
     utterancesConfig: {
-      repo: ''
+      repo: '' // Utterances 评论系统的 GitHub 仓库
     },
     cusdisConfig: {
-      appId: '', // data-app-id
-      host: 'https://cusdis.com', // data-host, change this if you're using self-hosted version
-      scriptSrc: 'https://cusdis.com/js/cusdis.es.js' // change this if you're using self-hosted version
+      appId: '', // Cusdis 应用 ID
+      host: 'https://cusdis.com', // Cusdis 主机地址
+      scriptSrc: 'https://cusdis.com/js/cusdis.es.js' // Cusdis 脚本源
     }
   },
-  isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
+  isProd: process.env.VERCEL_ENV === 'production' // 区分开发和生产环境
 }
-// export default BLOG
+
+// 导出 BLOG 配置
 module.exports = BLOG
