@@ -50,3 +50,8 @@ MyApp.getInitialProps = async ctx => {
     locale: await loadLocale('basic', config.lang)
   }
 }
+
+<Head>
+  <link rel="icon" href="/favicon.ico" />
+  // ... 可能存在的其他 meta 标签或链接 ...
+</Head>
