@@ -5,6 +5,7 @@ const Footer = ({ fullWidth }) => {
   const d = new Date()
   const y = d.getFullYear()
   const from = +BLOG.since
+
   return (
     <div
       className={`mt-6 flex-shrink-0 m-auto w-full text-gray-500 dark:text-gray-400 transition-all ${
@@ -13,10 +14,11 @@ const Footer = ({ fullWidth }) => {
     >
       <hr className="border-gray-200 dark:border-gray-600" />
       <div className="my-4 text-sm leading-6">
-        <div className="flex align-baseline justify-center flex-wrap">
+        <div className="flex flex-col items-center justify-center">
           <p>
             © {BLOG.author} {from === y || !from ? y : `${from} - ${y}`}
           </p>
+          <p className="mt-2 italic">做真正有价值的事至死方休</p>
         </div>
       </div>
     </div>

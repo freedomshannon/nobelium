@@ -13,7 +13,7 @@ const NavBar = () => {
     { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
     { id: 2, name: locale.NAV.RSS, to: '/feed', show: true, external: true },
     { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true },
-    { id: 4, name: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>, to: 'https://x.com/YourXUsername', show: true, external: true } // 新添加的 X 导航项
+    { id: 4, name: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>, to: 'https://x.com/Bright199678363', show: true, external: true } // 新添加的 X 导航项
   ]
   return (
     <div className="flex-shrink-0">
