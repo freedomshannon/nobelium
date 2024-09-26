@@ -132,9 +132,10 @@ const HeaderName = forwardRef(function HeaderName ({ siteTitle, siteDescription,
   return (
     <div
       ref={ref}
-      className="header-name ml-2 font-medium text-gray-600 dark:text-gray-300 capture-pointer-events"
+      className="header-name ml-2 font-medium text-gray-600 dark:text-gray-300 capture-pointer-events flex flex-col"
       onClick={onClick}
     >
+      <div className="h-6"></div> {/* 这是一个空的 div，用来创建上方的空间 */}
       <div className="flex flex-col">
         <span className="site-title text-lg">{siteTitle}</span>
         {siteDescription && (
