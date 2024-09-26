@@ -11,14 +11,14 @@ const BLOG = {
   lightBackground: '#ffffff', // 浅色模式背景色（十六进制值）
   darkBackground: '#18181B', // 深色模式背景色（十六进制值）
   path: '', // 部署路径，如果要在子文件夹中部署 Nobelium，则填写文件夹名
-  since: 2021, // 博客创建年份，如果留空则使用当前年份
+  since: 2024, // 博客创建年份，如果留空则使用当前年份
   postsPerPage: 7, // 每页显示的文章数量
-  sortByDate: false, // 是否按日期排序文章
+  sortByDate: true, // 是否按日期排序文章
   showAbout: true, // 是否显示"关于"页面
   showArchive: true, // 是否显示归档页面
   autoCollapsedNavBar: false, // 是否自动折叠导航栏
   ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // 生成 OG 图像的链接
-  socialLink: 'https://twitter.com/craigaryhart', // 社交媒体链接
+  socialLink: 'https://x.com/Bright199678363', // 社交媒体链接
   seo: {
     keywords: ['Blog', 'Website', 'Notion'], // SEO 关键词
     googleSiteVerification: '' // Google 站点验证码

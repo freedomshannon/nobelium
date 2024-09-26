@@ -130,16 +130,24 @@ export default function Header ({ navBarTitle, fullWidth }) {
 
 const HeaderName = forwardRef(function HeaderName ({ siteTitle, siteDescription, postTitle, onClick }, ref) {
   return (
-    <p
+    <div
       ref={ref}
-      className="header-name ml-2 font-medium text-gray-600 dark:text-gray-300 capture-pointer-events grid-rows-1 grid-cols-1 items-center"
+      className="header-name ml-2 font-medium text-gray-600 dark:text-gray-300 capture-pointer-events"
       onClick={onClick}
     >
-      {postTitle && <span className="post-title row-start-1 col-start-1">{postTitle}</span>}
-      <span className="row-start-1 col-start-1">
-        <span className="site-title">{siteTitle}</span>
-        <span className="site-description font-normal">, {siteDescription}</span>
-      </span>
-    </p>
+      <div className="flex flex-col">
+        <span className="site-title text-lg">{siteTitle}</span>
+        {siteDescription && (
+          <span className="site-description font-normal text-sm hidden sm:inline">
+            {siteDescription}
+          </span>
+        )}
+      </div>
+      {postTitle && (
+        <span className="post-title absolute top-0 left-0 w-full text-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          {postTitle}
+        </span>
+      )}
+    </div>
   )
 })
