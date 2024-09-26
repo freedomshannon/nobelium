@@ -18,7 +18,7 @@ const Footer = ({ fullWidth }) => {
           <p>
             © {BLOG.author} {from === y || !from ? y : `${from} - ${y}`}
           </p>
-          <p className="mt-2 italic">做真正有价值的事至死方休</p>
+          <p className="mt-2 italic">做真正有价值的事至死方休,像牲畜一样野蛮的去掠夺</p>
         </div>
       </div>
     </div>
